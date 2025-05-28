@@ -15,11 +15,20 @@ class Employee:
     def sum(a, b):
         return a + b
     
+    # Class Methods
+    @classmethod
+    def print_company(cls):
+        print(cls.company)
+
+
 e1 = Employee("Isu", 500000)
-e2 = Employee("Hetvi", 250000)
-# e3 = Employee("Atul", 1000000)
+e2 = Employee("Atul", 250000)
+# e3 = Employee("Shashikant", 1000000)
 # print(Employee.company)  # This will always print the class attribute
 # print(e1.company) # This will always print the instance attribute whenever present
-e1.print_info()  # This will print the info of e1
-e2.print_info()  # This will print the info of e2
-print(e2.sum(10, 24))
+# e1.print_info()  # This will print the info of e1
+# e2.print_info()  # This will print the info of e2
+
+# print(e2.sum(10, 24))
+
+e1.print_company() # This will print the company name using the class method
