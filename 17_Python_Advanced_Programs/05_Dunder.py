@@ -11,7 +11,11 @@ class Employee:
         return f"Employee(name={self.name}, salary={self.salary})"
 
 
+    def __len__(self):
+        return len(self.name)
+
 e = Employee("Isu", 500000)
-print(e.name, e.salary) # This will print the name and salary of the employee
-print(str(e)) # This will call the __str__ method and print the string representation of the object
-print(repr(e)) # This will call the __repr__ method and print the official string representation of the object. Mostly used by Developers for debugging purposes
+print(len(e))
+# print(e.name, e.salary) # This will print the name and salary of the employee
+# print(str(e)) # This will call the __str__ method and print the string representation of the object
+# print(repr(e)) # This will call the __repr__ method and print the official string representation of the object. Mostly used by Developers for debugging purposes
