@@ -20,6 +20,10 @@ class Employee:
     def print_company(cls):
         print(cls.company)
 
+    @classmethod
+    def change_company(cls, new_company):
+        cls.company = new_company
+
 
 e1 = Employee("Isu", 500000)
 e2 = Employee("Atul", 250000)
@@ -31,4 +35,6 @@ e2 = Employee("Atul", 250000)
 
 # print(e2.sum(10, 24))
 
-e1.print_company() # This will print the company name using the class method
+print(Employee.company) # This will print the company name from the class attribute
+e1.change_company("Apple") # This will change the company name using the class method
+print(Employee.company) # This will print the updated company name
